@@ -1,0 +1,12 @@
+version: '3'
+services:
+  chatgpt:
+    image: sheepgreen/chatgpt-web #如果是arm架构，需要改成chatgpt-web:arm
+    container_name: webchat
+    environment:
+      - OPENAI_API_KEY=前面你获取到的OpenAI API KEY
+    volumes:
+      - ./chat.html:/chatgpt-web/templates/chat.html
+    ports:
+      - "8888:80" #80为容器内部端口，不可更改；8888为外部映射端口，可自行更改
+    restart: always
