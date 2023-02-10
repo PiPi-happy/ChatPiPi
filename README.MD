@@ -1,6 +1,6 @@
 # chatgpt-web
 ### 使用GPT-3.5中的text-davinci-003模型，利用OpenAI API实现简单HTML网页版在线聊天（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
-#### ![G L%7VF I~{@83}SVRI_WPN](https://user-images.githubusercontent.com/58287293/207792987-a0a781df-8273-4148-a369-aa4a2379686a.png)（重要）ChatGPT与GPT-
+
 ## 部署
 ### 获取OpenAI API KEY
 - 建议参考[此教程](https://blog.csdn.net/hekaiyou/article/details/128303729)获取
