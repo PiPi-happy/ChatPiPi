@@ -1,0 +1,26 @@
+chatgpt在线聊天官网：https://chat.openai.com/auth/login
+
+chatgpt-APIkey:https://openai.com/api/login
+
+项目地址：https://github.com/PiPi-happy/ChatPiPi
+
+
+一、docker安装
+curl -fsSL https://get.docker.com | bash -s docker 
+
+二、docker compose安装命令
+apt install docker-compose
+
+三、下载chat.html和compose.yml配置文件
+wget https://raw.githubusercontent.com/PiPi-happy/ChatPiPi/main/chat.html
+wget https://raw.githubusercontent.com/PiPi-happy/ChatPiPi/main/docker-compose.yml
+
+四、修改ompose.yml配置
+vim docker-compose.yml
+
+启动
+docker-compose up -d
+
+访问
+http://ip:端口/chat
+
