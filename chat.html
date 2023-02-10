@@ -1,0 +1,78 @@
+<html lang="en">
+<!--自适应屏幕大小-->
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon" /> -->
+    <meta charset="UTF-8">
+    <title>OpenAI</title>
+    <style>
+        body {
+          color: #333;
+          background-color: #eee;
+        }
+            @media (prefers-color-scheme: dark) {
+        body {
+          background: write;
+          color: black;
+        }
+            }
+    </style>
+</head>
+
+<body>
+    <div align="center">
+       <h2>PiPi-ChatGPT</h2>
+        <div>
+            <h4>注意</h4>
+            <div>
+                <div>
+                    <h5>提交后需要等待处理完成，请勿重复提交~！</h5>
+                </div>
+                <div>
+                    <h5>（服务器在国外，OpenAI返回速度也比较慢）</h5>
+                </div>
+                <div>
+                    <h5>~结果返回有长度限制~</h5>
+                </div>
+                <div>
+                    <h5>~仅适用于体验~</h5>
+                </div>
+                <hr>
+                {% if message %} {{ message }} {% endif %}
+                <form method="post" onsubmit="submit.disabled=true">
+                    <textarea style="width:35%;" name="question" placeholder="点击这里输入问题" rows="11" id="form"></textarea>
+                    <br>
+                    <input type="submit" style="width:80px;height:30px;background-color:wirte;font-size:20px" value="提交" id="submit">
+                </form>
+                <div id="loading" style="display:none; color:red"><b>后端正在处理，请稍等...</b></div>
+                {% if question %}
+                <div style="text-align: left"><b>人类:</b>
+                    <pre id="question">{{ question }}</pre>
+                </div>
+                <hr>
+                <div style="text-align: left"><b>人工智障:</b>
+                    <pre style="text-align:left; white-space: pre-wrap;" id="res">{{ res }}</pre>
+                </div>
+                {% endif %}
+            </div>
+
+            <script>
+                let loading = document.getElementById('loading');
+                let form = document.querySelector('form');
+                form.addEventListener('submit', () => {
+                    loading.style.display = 'block';
+                });
+            </script>
+        </div>
+        <div class="copyright mt-20">
+        </div>
+        <div class="footer-menu mt-30">
+            <a href="https://space.bilibili.com/5714643/" target="_blank">我的B站空间</a>
+        </div>
+    </div>
+</body>
+
+</html>
