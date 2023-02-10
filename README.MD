@@ -8,9 +8,8 @@
 #### 从源码配置
 - 请参考原作者[github](https://github.com/AlliotTech/chatgpt-web)
 #### 使用Docker Compose
-- 下
-
-- 新建`docker-compose.yml`配置文件，粘贴以下内容并保存，放在与`chat.html`文件相同的目录下
+- 下载项目内的`chat.html`和`docker-compose.yml`配置文件，放置在一个空文件夹内
+- 编辑`docker-compose.yml`配置文件，填写自已的`API KEY`值
 ```bash
 version: '3'
 services:
