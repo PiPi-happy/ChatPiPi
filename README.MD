@@ -11,17 +11,16 @@
 - 下载项目内的`chat.html`和`docker-compose.yml`配置文件，放置在一个空文件夹内
 - 编辑`docker-compose.yml`配置文件，填写自已的`API KEY`值
 ```bash
-version: '3'
 services:
   chatgpt:
     image: sheepgreen/chatgpt-web #如果是arm架构，需要改成chatgpt-web:arm
     container_name: webchat
     environment:
       - OPENAI_API_KEY=前面你获取到的OpenAI API KEY
-    volumes:
-      - ./chat.html:/chatgpt-web/templates/chat.html
+#    volumes:
+#      - ./chat.html:/chatgpt-web/templates/chat.html #默认内置我的UI，如需替换自用网页请取消注释
     ports:
-      - "8888:80" #80为容器内部端口，不可更改；8888为外部映射端口，可自行更改
+      - "8888:8088" #8088为容器内部端口，不可更改；8888为外部映射端口，可自行更改
     restart: always
 ```
 - 输入`docker-compose up -d`即启动成功
