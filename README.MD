@@ -1,17 +1,18 @@
-# chatgpt-web
-### 使用GPT-3.5中的text-davinci-003模型，利用OpenAI API实现简单HTML网页版在线聊天（基于[此项目](https://github.com/AlliotTech/chatgpt-web)调整而来）
+作者已更新，请根据作者说明操作
+[作者Docker Hub地址]([https://github.com/AlliotTech/chatgpt-web)]
 
+~~# chatgpt-web
+### 使用GPT-3.5中的text-davinci-003模型，利用OpenAI API实现简单HTML网页版在线聊天（基于调整而来）
 ## 部署
 ### 获取OpenAI API KEY
-- 建议参考[此教程](https://blog.csdn.net/hekaiyou/article/details/128303729)获取
-### 配置
-#### 从源码配置
-- 请参考原作者[github](https://github.com/AlliotTech/chatgpt-web)
-#### 使用Docker Compose
-- 下载项目内的`chat.html`和`docker-compose.yml`配置文件，放置在一个空文件夹内
-- 编辑`docker-compose.yml`配置文件，填写自已的`API KEY`值
-```bash
-services:
+~~- 建议参考[此教程](https://blog.csdn.net/hekaiyou/article/details/128303729)获取
+~~### 配置
+~~#### 从源码配置
+~~- 请参考原作者[github](https://github.com/AlliotTech/chatgpt-web)
+~~#### 使用Docker Compose
+~~- 下载项目内的`chat.html`和`docker-compose.yml`配置文件，放置在一个空文件夹内
+~~- 编辑`docker-compose.yml`配置文件，填写自已的`API KEY`值
+~~services:
   chatgpt:
     image: sheepgreen/chatgpt-web #如果是arm架构，需要改成chatgpt-web:arm
     container_name: webchat
@@ -22,8 +23,7 @@ services:
     ports:
       - "8888:8088" #8088为容器内部端口，不可更改；8888为外部映射端口，可自行更改
     restart: always
-```
-- 输入`docker-compose up -d`即启动成功
-## 注意事项
-- 访问地址为http://ip:port/chat
-- 修改`chat.html`文件后，需要docker restart webchat才能生效
+~~- 输入`docker-compose up -d`即启动成功
+~~## 注意事项
+~~- 访问地址为http://ip:port/chat
+~~-修改chat.html文件后，需要docker restart webchat才能生效
