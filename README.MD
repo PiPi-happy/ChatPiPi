@@ -1,2 +1,2 @@
-## 作者已更新，请根据作者说明操作
-### [作者Docker Hub地址](https://hub.docker.com/r/sheepgreen/chatgpt-web)
+## 旧项目已不建议使用，推荐以下新项目
+### [B站教程](https://www.bilibili.com/video/BV1KM4y167e8/)
